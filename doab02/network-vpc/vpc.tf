@@ -1,13 +1,3 @@
-# S3 backed
-terraform {
-  backend "s3" {
-    bucket = "terraform-statefiles-29112020"
-    key    = "vpc-statefile/terraform.tfstate"
-    region = "us-east-1"
-  }
-}
-
-
 # Create Custom VPC for LAB
 resource "aws_vpc" "cloudlab" {
   cidr_block       = var.VPC_CIDR_BLOCK
